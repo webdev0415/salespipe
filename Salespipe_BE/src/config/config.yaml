@@ -1,0 +1,59 @@
+http:
+  host: 'localhost'
+  port: 8080
+
+db:
+  mysql:
+    type: 'mysql'
+    host: 'us-cdbr-east-04.cleardb.com'
+    port: 3306
+    database: 'heroku_0433cf592b52eb5'
+    username: 'b9eb82d1b8707c'
+    password: 'e514cc49'
+
+  test:
+    type: 'mysql'
+    host: 'localhost'
+    port: 3306
+    database: 'salepipe'
+    username: 'salepipe'
+    password: '12345678'
+    logging: false
+
+auth:
+  signup:
+    expiresIn: '24' # hours
+  forgotPassword:
+    expiresIn: '24' # hours
+  secret: '12345'
+  signOptions:
+    expiresIn: '0.5d'
+
+email:
+  apiKey: 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
+  defaultSender: igor.shevk@gmail.com
+  templates:
+    signupEmailPrepareId: d-4c6c1af94ab34713903951a211405c56
+    signupEmailConfirmId: d-3f4e466b517747a9aae6f14ab49c4254
+    forgotPasswordRequestId: d-a8dad92a53344658a48f62e3a28b113d
+    changedPasswordId: d-418359d170264e92b4efae046215d74d
+    createdAccountId: d-c82dfa89615d4ae586e556ef32ecef93
+    verifiedAccountId: d-396d1868d6674a5196a4a3590420c708
+
+emailMarco:
+  apiKey: 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
+  defaultSender: marco.costa@aluno.ufop.edu.br
+  salesPipeEmail: marco.costa@aluno.ufop.edu.br
+  templates:
+    signupEmailPrepareId: d-4dfbd96e4a8d4fb59d685aff717738d9
+    signupEmailConfirmId: d-566d6146d4fc4d3ca27b00bd9c61976e
+    forgotPasswordRequestId: d-be91b69104ad43c388d253f95749a343
+    changedPasswordId: d-5cbafe6dc58f486297a9e9d3f1a31b43
+    createdAccountId: d-2b9aa44cdf5a40578ca7213ea279cfe1
+    verifiedAccountId: d-75582f0871d74479a11cdf1a967c2705
+    newContract: d-dc4ebfd15655460495bb41738f005ae6
+s3:
+  accessKeyId: AKIASU4IZ3EZR7EKZUOX
+  secretAccessKey: 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
+  region: us-east-2
+  bucketName: sales-pipe-image-bucket

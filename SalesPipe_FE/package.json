@@ -1,0 +1,88 @@
+{
+  "name": "sp-fe",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.6.4",
+    "@craco/craco": "^6.3.0",
+    "@fullpage/react-fullpage": "^0.1.19",
+    "@reduxjs/toolkit": "^1.6.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/dom-mediacapture-record": "^1.0.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^16.7.10",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-select-country-list": "^2.2.0",
+    "@types/webpack-env": "^1.16.2",
+    "antd": "^4.16.13",
+    "axios": "^0.21.3",
+    "canvas": "^2.8.0",
+    "craco-antd": "^1.19.0",
+    "craco-less": "^1.20.0",
+    "css-loader": "^6.2.0",
+    "env-cmd": "^10.1.0",
+    "face-api.js": "^0.22.2",
+    "less": "^4.1.1",
+    "less-loader": "^10.0.1",
+    "nodemon": "^2.0.12",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "react-select-country-list": "^2.2.3",
+    "react-webcam": "^6.0.0",
+    "style-loader": "^3.2.1",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "nodemon -w craco.config.js -w ./src/common/styles/antd.customize.less -w .env --exec \"craco start\"",
+    "start:dev": "nodemon -w craco.config.js -w ./src/common/styles/antd.customize.less -w .env.dev --exec \"craco start\"",
+    "start:prd": "env-cmd -f .env.prd craco start",
+    "build:local": "craco build",
+    "build:dev": "env-cmd -f .env.dev craco build",
+    "build:prd": "env-cmd -f .env.prd craco build",
+    "lint": "eslint ./src/**/*.{js,ts,tsx} --quiet --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "test": "craco test",
+    "eject": "craco eject",
+    "heroku-postbuild": "yarn build:prd"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.2.1"
+  }
+}
